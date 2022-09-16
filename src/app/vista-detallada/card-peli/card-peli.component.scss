@@ -1,0 +1,15 @@
+mat-card {
+  margin: 1%;
+  background-color: wheat;
+  img {
+    width: 10%;
+  }
+
+  button {
+    width: 40%;
+    margin-top: 1%;
+    background-color: rgba($color: #571D0C, $alpha: 1);
+    color: white;
+    border-radius: 15px;
+  }
+}
