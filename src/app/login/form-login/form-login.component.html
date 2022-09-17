@@ -1,0 +1,26 @@
+<div>
+  <form class="example-form">
+    <h1>Iniciar Sesión</h1>
+    <h3>Teléfono</h3>
+    <mat-form-field id="input_tel" appearance="fill">
+      <mat-label id="lbl_tel">Ingrese su teléfono</mat-label>
+      <span matPrefix>+52 &nbsp;</span>
+      <input  type="tel" matInput placeholder="555-555-1234">
+    </mat-form-field>
+
+    <h3>Contraseña</h3>
+    <mat-form-field appearance="fill" id="input_pass">
+      <mat-label>Ingrese su contraseña</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+
+    <button routerLink="/catalogo" id="btn_ingresar" mat-raised-button color="primary">Ingresar</button>
+    <button routerLink="/registro" id="btn_registrar" mat-button color="white">Registrarse</button>
+
+  </form>
+</div>
+

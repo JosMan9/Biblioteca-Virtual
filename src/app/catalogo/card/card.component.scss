@@ -1,17 +1,18 @@
 mat-card {
+  width: 80%;
+  box-shadow: 2px -5px 20px black;
   margin: 1%;
-  background-color: white;
+  border-radius: 5%;
+  background-color: rgba($color: white, $alpha: 0.7);
   img {
-    width: 10%;
+    width: 20%;
   }
 
   button {
-    position: relative;
-    width: 30%;
+    width: 40%;
     margin-top: 1%;
     background-color: rgba($color: #9a8478, $alpha: 1);
     color: white;
     border-radius: 15px;
-    left: 30%;
   }
 }

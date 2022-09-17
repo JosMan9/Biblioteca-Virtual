@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 10px;
+}
+
+div {
+  box-shadow: 2px -5px 20px black;
+  display: flex;
+  justify-items: center;
+  height: 4%;
+  background-color: rgba($color: #4B4330, $alpha: 1.0);
+
+ #user_btn {
+  color: #571D0C;
+ }
+
+  .btn_loginRegister {
+    width: 8%;
+    margin-right: 2%;
+    position: relative;
+    left: 80%;
+    background-color: #7C6E49;
+    text-align: center;
+  }
+}

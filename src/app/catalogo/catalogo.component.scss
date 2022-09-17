@@ -1,0 +1,35 @@
+header {
+  width: 100%;
+  height: 25%;
+  margin-top: 0;
+  background-image: url("../../assets/fondo2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+  .slogan-div {
+    width: 60%;
+    height: 50%;
+    background-color: #9a8478;
+    text-align: center;
+    position: relative;
+    box-shadow: 2px 20px 20px #4b4330;
+    border-radius: 25px;
+    padding-top: 15px;
+    left: 21%;
+    top: 65%;
+
+    h1 {
+      text-align: center;
+    }
+  }
+}
+mat-grid-list {
+  margin-left: 2%;
+  margin-top: 6%;
+
+}
+
+/*@media (max-width: 300px) {
+
+}*/

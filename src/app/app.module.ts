@@ -10,6 +10,12 @@ import { FormLoginComponent } from './login/form-login/form-login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { FormRegistroComponent } from './registro/form-registro/form-registro.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { CardPeliComponent } from './vista-detallada/card-peli/card-peli.component';
+import { CardComponent } from './catalogo/card/card.component';
+import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 import { MatButtonModule } from '@angular/material/button';
 import { LoginComponent } from './login/login.component';
@@ -17,6 +23,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -28,7 +36,10 @@ import {MatDividerModule} from '@angular/material/divider';
     FormLoginComponent,
     RegistroComponent,
     FormRegistroComponent,
-    PerfilComponent
+    PerfilComponent,
+    VistaDetalladaComponent,
+    CardPeliComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +49,11 @@ import {MatDividerModule} from '@angular/material/divider';
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCardModule,
+    MatGridListModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
