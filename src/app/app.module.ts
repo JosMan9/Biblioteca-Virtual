@@ -15,7 +15,7 @@ import { CardComponent } from './catalogo/card/card.component';
 import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ToastrModule } from 'ngx-toastr';
+//import { ToastrModule } from 'ngx-toastr';
 
 import { MatButtonModule } from '@angular/material/button';
 import { LoginComponent } from './login/login.component';
