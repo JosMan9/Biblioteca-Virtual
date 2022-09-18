@@ -1,4 +1,7 @@
-<app-registrar-ingresar></app-registrar-ingresar>
+<app-registrar-ingresar
+      [nombre]="nombre"
+      [apellidos]="apellidos"
+      [oculto]=" isHidden"></app-registrar-ingresar>
 <header>
 
   <div class="slogan-div">
@@ -12,10 +15,15 @@
 
 </div>
 
-<mat-grid-list cols="4" rowHeight="30%">
-  <mat-grid-tile *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1]">
-    <app-card></app-card>
-
+<mat-grid-list cols="4" rowHeight="200px">
+  <mat-grid-tile *ngFor="let item of libros">
+    <app-card [titulo]="item.titulo"
+      [autor]="item.autor"
+      [anio]="item.anio"
+      [imgURL]="item.img"
+      [telefono]="telefono"
+      [objeto] = "item"
+      ></app-card>
   </mat-grid-tile>
 </mat-grid-list>
 

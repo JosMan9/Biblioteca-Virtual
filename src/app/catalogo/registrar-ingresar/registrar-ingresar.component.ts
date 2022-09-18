@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-registrar-ingresar',
@@ -6,10 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registrar-ingresar.component.scss']
 })
 export class RegistrarIngresarComponent implements OnInit {
+  @Input() oculto!: boolean;
+  @Input() nombre: string = "";
+  @Input() apellidos: string = "";
 
+  band = false;
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.oculto);
+  }
+
+  revibir(name: string) {
+
   }
 
 }

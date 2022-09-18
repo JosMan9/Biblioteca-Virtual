@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../services/usuario.service';
+import { Libro } from '../models/libro';
 
 @Component({
   selector: 'app-vista-detallada',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaDetalladaComponent implements OnInit {
 
-  constructor() { }
+  libro!: Libro;
+  constructor(private usuarioService: UsuarioService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.cargarLibro();
+
+    console.log(this.libro);
+  }
+
+  cargarLibro() {
+  this.usuarioService.disparador.subscribe( data => {
+      this.libro = data;
+      console.log(this.libro);
+
+    });
   }
 
 }

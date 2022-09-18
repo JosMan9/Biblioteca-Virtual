@@ -7,20 +7,20 @@
   </mat-card-header>
   -->
   <mat-card-title-group>
-  <img mat-card-x1-image src="../../../assets/portada_peli.jpg" alt="User">
+  <img mat-card-x1-image [src]="" alt="User">
 
   <mat-card-title>
-    Nombre: JOjo rabit
+    Nombre: {{libro_.titulo}}
   </mat-card-title>
 
   <mat-card-subtitle>
-    Autor: Castillo
+    Autor: {{libro_.autor}}
   </mat-card-subtitle>
 
   </mat-card-title-group>
 
   <mat-card-content>
-    (2007) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea eaque deserunt dignissimos accusamus. Natus magnam mollitia beatae dolore tempora! Soluta vel, et nisi voluptatem quae dolores asperiores quidem error. Blanditiis.
+    ({{libro_.anio}}) {{libro_.descripcion}}
   </mat-card-content>
 
   <mat-card-actions>

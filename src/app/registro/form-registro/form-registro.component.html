@@ -5,14 +5,14 @@
     <h3>Nombre</h3>
     <mat-form-field class="input"  appearance="fill">
       <mat-label id="lbl_tel">Ingrese su nombre</mat-label>
-      <input  type="text" matInput placeholder="Nombre">
+      <input  type="text" matInput placeholder="Nombre" #nombreInput (keyup)="validarDatos()">
     </mat-form-field>
 
 
     <h3>Apellidos</h3>
     <mat-form-field class="input" appearance="fill">
       <mat-label id="lbl_tel">Ingrese sus apellidos</mat-label>
-      <input  type="text" matInput placeholder="Apellidos">
+      <input  type="text" matInput placeholder="Apellidos" #apellidosInput (keyup)="validarDatos()">
     </mat-form-field>
 
 
@@ -20,26 +20,29 @@
     <mat-form-field class="input" appearance="fill">
       <mat-label id="lbl_tel">Ingrese su teléfono</mat-label>
       <span matPrefix>+52 &nbsp;</span>
-      <input  type="tel" matInput placeholder="555-555-1234">
+      <input  type="tel" matInput placeholder="555-555-1234" #telefonoInput (keyup)="validarDatos()">
     </mat-form-field>
 
     <h3>Correo electrónico</h3>
     <mat-form-field class="input" appearance="fill">
       <mat-label>Email</mat-label>
-      <input type="email" matInput placeholder="Ex. pat@example.com">
+      <input type="email" matInput placeholder="Ex. pat@example.com" #correoInput (keyup)="validarDatos()">
     </mat-form-field>
 
     <h3>Contraseña</h3>
     <mat-form-field appearance="fill" class="input">
       <mat-label>Ingrese una contraseña</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'">
+      <input matInput [type]="hide ? 'password' : 'text'" #contraInput (keyup)="validarDatos()">
       <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
     </mat-form-field>
 
 
-    <button routerLink="/catalogo" id="btn_ingresar" mat-raised-button color="primary">Registrar</button>
+    <button [disabled]="btn_bloqueado"  id="btn_ingresar" mat-raised-button color="primary" (click)="getDatos()">Registrar</button>
+    <!--
+      routerLink="/catalogo"
+    -->
 
   </form>
 </div>

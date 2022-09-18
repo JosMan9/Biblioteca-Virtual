@@ -1,17 +1,29 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Libro } from '../models/libro';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LibroService {
-
   libroURL = environment.libroURL;
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
+
+  private libro = new BehaviorSubject<Libro>({
+    titulo: '',
+    anio: '',
+    descripcion: '',
+    autor: '',
+    img: '',
+  });
+  public customTel = this.libro.asObservable();
+
+  public changeTel(lib: Libro): void {
+    this.libro.next(lib);
+  }
 
   public lista(): Observable<Libro[]> {
     //return this.httpClient.get<Libro[]>(this.libroURL + 'lista');

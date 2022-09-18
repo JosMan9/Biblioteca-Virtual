@@ -16,6 +16,7 @@ import { VistaDetalladaComponent } from './vista-detallada/vista-detallada.compo
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 //import { ToastrModule } from 'ngx-toastr';
+import { UsuarioService } from './services/usuario.service';
 
 import { MatButtonModule } from '@angular/material/button';
 import { LoginComponent } from './login/login.component';
@@ -25,6 +26,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -39,8 +41,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     PerfilComponent,
     VistaDetalladaComponent,
     CardPeliComponent,
-    CardComponent
-  ],
+    CardComponent,
+ ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -53,9 +55,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatCardModule,
     MatGridListModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

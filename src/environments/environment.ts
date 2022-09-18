@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  libroURL: "http://localhost:1011/libro/"
+  libroURL: "http://localhost:1011/libro/",
+  usuarioURL: "http://localhost:1011/usuario/"
 };
 
 /*

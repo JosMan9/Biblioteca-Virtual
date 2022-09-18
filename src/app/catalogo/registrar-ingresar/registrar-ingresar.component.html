@@ -1,7 +1,8 @@
 
 <div>
-  <button routerLink="/perfil" id="user_btn" mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+  <button *ngIf="oculto == true" routerLink="/perfil" id="user_btn" mat-icon-button color="primary" aria-label="Example icon button with a home icon">
     <mat-icon>person</mat-icon>
+    {{nombre}} {{apellidos}}
   </button>
     <button class="btn_loginRegister" routerLink="/login" id="iniciar_btn" mat-raised-button color="primary">Login</button>
     <button class="btn_loginRegister" routerLink="/registro" id="registrarse_btn" mat-raised-button color="accent">Registro</button>

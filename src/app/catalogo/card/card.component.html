@@ -7,24 +7,23 @@
   </mat-card-header>
   -->
   <mat-card-title-group>
-  <img mat-card-x1-image src="../../../assets/portada_peli.jpg" alt="User">
-
+  <img mat-card-x1-image [src]="imgURL">
   <mat-card-title>
-    Nombre: JOjo rabit
+    Nombre: {{titulo}}
   </mat-card-title>
 
   <mat-card-subtitle>
-    Autor: Castillo
+    Autor: {{autor}}
   </mat-card-subtitle>
 
   <mat-card-subtitle>
-    Año de publicación: 2017
+    Año de publicación: {{anio}}
   </mat-card-subtitle>
 
   </mat-card-title-group>
 
   <mat-card-actions>
-    <button routerLink="/vista-detallada" mat-raised-button >Ver más</button>
+    <button [routerLink]="['/vista-detallada']" routerLinkActive="router-link-active"  mat-raised-button (click)="sendDatos()" >Ver más</button>
 
   </mat-card-actions>
 

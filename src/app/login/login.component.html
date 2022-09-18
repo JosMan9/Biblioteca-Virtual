@@ -1,7 +1,5 @@
 <div>
-  <!--
-  <img src="../../assets/user2.png" alt="User" srcset="">
-
-  -->
-  <app-form-login></app-form-login>
+  <app-form-login [hidden]="bandFrom" (onUsuario)="recibirUsr($event)"></app-form-login>
 </div>
+
+<app-catalogo [hidden]="band" [telefono]="telefono_"></app-catalogo>

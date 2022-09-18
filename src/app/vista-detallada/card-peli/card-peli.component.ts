@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Libro } from 'src/app/models/libro';
 
 @Component({
   selector: 'app-card-peli',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-peli.component.scss']
 })
 export class CardPeliComponent implements OnInit {
-
+  @Input() libro_!: Libro;
+  img = "";
   constructor() { }
 
   ngOnInit(): void {
+    this.img = this.libro_.img;
   }
 
 }

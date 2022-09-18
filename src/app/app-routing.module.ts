@@ -33,6 +33,7 @@ const routes: Routes = [
     component: CatalogoComponent
   },
 
+
   {
     path: 'vista-detallada',
     component: VistaDetalladaComponent

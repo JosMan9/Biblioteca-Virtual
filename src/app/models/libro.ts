@@ -2,7 +2,7 @@ export class Libro {
   id?: number;
   titulo: string;
   anio: string;
-  descripcion: string;
+  descripcion?: string;
   autor: string;
   img: string;
 
