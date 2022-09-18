@@ -13,17 +13,17 @@ export class VistaDetalladaComponent implements OnInit {
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
-    this.cargarLibro();
+    //this.cargarLibro();
 
     console.log(this.libro);
   }
 
-  cargarLibro() {
+  /*cargarLibro() {
   this.usuarioService.disparador.subscribe( data => {
       this.libro = data;
       console.log(this.libro);
 
     });
-  }
+  }*/
 
 }

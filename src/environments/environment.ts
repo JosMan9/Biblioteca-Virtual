@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   libroURL: "http://localhost:1011/libro/",
-  usuarioURL: "http://localhost:1011/usuario/"
+  usuarioURL: "http://localhost:1011/usuario/",
+  prestamoURL: "http://localhost:1011/prestamo",
 };
 
 /*

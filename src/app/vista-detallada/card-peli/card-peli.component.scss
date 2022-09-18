@@ -1,8 +1,25 @@
 mat-card {
   margin: 1%;
   background-color: white;
+  color: black;
   img {
     width: 10%;
+  }
+
+  mat-card-title {
+    font-size: 60px;
+  }
+
+  mat-card-subtitle {
+    color: black;
+    font-size: 40px;
+    margin-top: 10%;
+  }
+
+  mat-card-content {
+    color: black;
+    font-size: 25px;
+    margin-top: 4%;
   }
 
   button {

@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
 import { Libro } from '../../models/libro';
 import { Router } from '@angular/router';
+import { LibroService } from '../../services/libro.service';
 
 @Component({
   selector: 'app-card',
@@ -14,20 +15,20 @@ export class CardComponent implements OnInit {
   @Input() anio: string = ""
   @Input() imgURL: string = ""
   @Input() telefono: string = ""
-  @Input() objeto!: object
+  @Input() descripcion: string = ""
+  @Input() objeto!: Libro
+  //@Input() id = 0;
   libro!: Libro;
-  constructor(private UsuarioService: UsuarioService, private router: Router) {
+  constructor(private UsuarioService: UsuarioService, private router: Router, private libroService: LibroService) {
   }
 
   ngOnInit(): void {
-    this.libro = new Libro(this.titulo, this.anio, "", this.autor, this.imgURL);
-    //console.log(this.libro);
-    //console.log(this.objeto);
+   // this.libro = new Libro(this.titulo, this.anio, this.descripcion, this.autor, this.imgURL);
+   this.libro = this.objeto;
   }
 
   sendDatos() {
-    this.UsuarioService.disparador.emit(this.libro);
-    //this.router.navigate(['/visya-detallada']);
+    this.libroService.changeLibro(this.libro);
   }
 
 }

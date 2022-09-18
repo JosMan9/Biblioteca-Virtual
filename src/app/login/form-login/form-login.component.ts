@@ -73,7 +73,7 @@ export class FormLoginComponent implements OnInit {
         this.usuarioService.changeTel(this.usuario);
       } else {
         alert("Contraseña incorrecta");
-        //this.router.navigate(['/login']);
+        this.router.navigate(['/login']);
 
       }
     } else {

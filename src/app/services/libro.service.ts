@@ -19,9 +19,9 @@ export class LibroService {
     autor: '',
     img: '',
   });
-  public customTel = this.libro.asObservable();
+  public customLibro = this.libro.asObservable();
 
-  public changeTel(lib: Libro): void {
+  public changeLibro(lib: Libro): void {
     this.libro.next(lib);
   }
 

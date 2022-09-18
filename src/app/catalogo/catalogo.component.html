@@ -11,9 +11,6 @@
   </div>
 </header>
 
-<div class="body-catalogo">
-
-</div>
 
 <mat-grid-list cols="4" rowHeight="200px">
   <mat-grid-tile *ngFor="let item of libros">
@@ -22,25 +19,9 @@
       [anio]="item.anio"
       [imgURL]="item.img"
       [telefono]="telefono"
+      [descripcion]="item.descripcion"
+      [id] = "item.id"
       [objeto] = "item"
       ></app-card>
   </mat-grid-tile>
 </mat-grid-list>
-
-
-<!--
-  <app-registro></app-registro>
-
--->
-<!--
-<app-login></app-login>
-
--->
-
-<!--
-  <app-perfil></app-perfil>
--->
-<!--
-
-<app-vista-detallada></app-vista-detallada>
--->

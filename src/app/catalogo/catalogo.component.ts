@@ -4,17 +4,13 @@ import {
   OnChanges,
   OnInit,
   Output,
-  SimpleChanges,
 } from '@angular/core';
-//import { ToastrService } from 'ngx-toastr';
 import { Libro } from '../models/libro';
 import { LibroService } from '../services/libro.service';
 import { Usuario } from '../models/usuario';
 import { UsuarioService } from '../services/usuario.service';
 import { Router } from '@angular/router';
-import { LocalService } from '../services/local.service';
 import { EventEmitter } from '@angular/core';
-import { tap } from 'rxjs';
 
 @Component({
   selector: 'app-catalogo',
@@ -33,27 +29,23 @@ export class CatalogoComponent implements OnInit {
   //telefono: string = '';
   @Output() salida:EventEmitter<string> = new EventEmitter();
 
-  /*
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['telefono']) {
-      console.log(this.telefono);
-      //const dato = changes.telefono;
-    } else {
-      console.log("sin datos");
-
-    }
-  }*/
 
   ngOnInit(): void {
-   // this.cargarUsuario();
    this.usuarioService.customTel.subscribe(usr => this.usuario = usr);
+
+   if (this.usuario.telefono == "") {
+    console.log("estoy vacio");
+    this.isHidden = false;
+   } else {
+    this.isHidden = true;
+
+   }
   }
 
 
   constructor(
     private libroService: LibroService,
     private usuarioService: UsuarioService,
-    private router: Router //private local: LocalService
   ) {
     this.libroService.lista().subscribe(
       (data) => {
@@ -128,9 +120,8 @@ export class CatalogoComponent implements OnInit {
     console.log(this.telefono)*/
   }
 
-  cargarPerfil() {
-    //this.usuarioService.changeTel(this.usuario);
-  }
+  cargarLibro() {
 
+  }
 
 }
